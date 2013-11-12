@@ -36,7 +36,7 @@ public class TestDatabaseActivity extends ListActivity {
 	    Comment comment = null;
 	    switch (view.getId()) {
 	    case R.id.add:
-	      String[] comments = new String[] { "Cool", "Very nice", "Hate it" };
+	      String[] comments = new String[] { "Cool " + System.currentTimeMillis(), "Very nice " + System.currentTimeMillis(), "Hate it " + System.currentTimeMillis() };
 	      int nextInt = new Random().nextInt(3);
 	      // save the new comment to the database
 	      comment = datasource.createComment(comments[nextInt]);
